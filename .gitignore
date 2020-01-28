@@ -1,3 +1,5 @@
 .terraform/
 keys/
 packer
+config_map_aws_auth.yaml
+.terraform/plugins/linux_amd64/lock.json                                    
