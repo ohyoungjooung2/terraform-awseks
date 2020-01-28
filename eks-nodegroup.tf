@@ -1,0 +1,24 @@
+resource "aws_eks_node_group" "terraform-demo-cluster-grp" {
+     cluster_name = "${var.cluster-name}"
+     node_group_name = "terraform-demo-cluster-grp"
+     node_role_arn = "${aws_iam_role.node-role.arn}"
+     subnet_ids  = ["${aws_subnet.eks-node-subnet-pub1.id}","${aws_subnet.eks-node-subnet-pub2.id}","${aws_subnet.eks-node-subnet-pub2.id}","${aws_subnet.eks-node-subnet-pri1.id}","${aws_subnet.eks-node-subnet-pri2.id}"]
+
+     scaling_config {
+         desired_size = 2
+         max_size = 2
+         min_size = 2
+      }
+
+     depends_on = [
+        aws_iam_role_policy_attachment.node-AmazonEKSWorkerNodePolicy,
+        aws_iam_role_policy_attachment.node-AmazonEKS_CNI_Policy,
+        aws_iam_role_policy_attachment.node-AmazonEC2ContainerRegistryReadOnly,
+  ]
+}
+
+
+
+
+
+
