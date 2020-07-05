@@ -1,11 +1,11 @@
 variable "cluster-name" {
    default = "terraform-eks-demo"
-   type = "string"
+   type = string
 }
 
 variable "aws_region" {
    default = "ap-northeast-2"
-   type = "string"
+   type = string
 }
 
 

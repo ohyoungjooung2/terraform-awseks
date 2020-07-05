@@ -26,4 +26,4 @@ fi
 CLUSTER-NAME="terraform-eks-demo"
 REGION="ap-northeast-2"
 #
-aws eks --region $REGION update-kubeconfig --name $CLUSTER-NAME
+aws eks --region $REGION update-kubeconfig --name "$CLUSTER-NAME"
