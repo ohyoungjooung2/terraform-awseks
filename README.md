@@ -1,8 +1,8 @@
 # terraform-awseks
 ````
-This repo is an example that create aws based k8s(kubernetes) structure using terraform.
+http://wnapdlf.blogspot.com/2020/07/k8s-aws-eks-ecr-springboot-deployment.html#more
 
-I shall update this file when I have free time.
+This repo is an example that create aws based k8s(kubernetes) structure using terraform.
 
 Thanks.
 ````
