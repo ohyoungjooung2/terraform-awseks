@@ -20,5 +20,3 @@ resource "aws_eks_node_group" "terraform-demo-cluster-grp" {
         aws_iam_role_policy_attachment.node-AmazonEC2ContainerRegistryReadOnly,
   ]
 }
-
-
