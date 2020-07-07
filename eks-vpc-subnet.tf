@@ -19,6 +19,7 @@ resource "aws_subnet" "eks-node-subnet-pub1" {
          map(
          "Name","terraform-eks-node-subnet-pub",
          "kubernetes.io/cluster/${var.cluster-name}","shared",
+         "kubernetes.io/role/elb","1",
          )
       }"
 }
@@ -31,6 +32,7 @@ resource "aws_subnet" "eks-node-subnet-pub2" {
          map(
          "Name","terraform-eks-node-subnet-pub",
          "kubernetes.io/cluster/${var.cluster-name}","shared",
+         "kubernetes.io/role/elb","1",
          )
       }"
 }
