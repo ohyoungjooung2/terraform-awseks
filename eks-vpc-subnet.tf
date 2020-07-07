@@ -14,6 +14,7 @@ resource "aws_subnet" "eks-node-subnet-pub1" {
       availability_zone = "ap-northeast-2a"
       cidr_block = "10.0.0.0/24"
       vpc_id = "${aws_vpc.eks-vpc.id}"
+      map_public_ip_on_launch = "true"
       tags = "${
          map(
          "Name","terraform-eks-node-subnet-pub",
@@ -25,6 +26,7 @@ resource "aws_subnet" "eks-node-subnet-pub2" {
       availability_zone = "ap-northeast-2b"
       cidr_block = "10.0.1.0/24"
       vpc_id = "${aws_vpc.eks-vpc.id}"
+      map_public_ip_on_launch = "true"
       tags = "${
          map(
          "Name","terraform-eks-node-subnet-pub",
